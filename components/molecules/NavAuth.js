@@ -1,18 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
+import Link from "next/link";
 
-const NavAuth = () => {
-  return (
-    <>
-      <li className="nav-item my-auto">
-        <a
-          className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
-          href="./src/sign-in.html"
-          role="button"
-        >
-          Sign In
-        </a>
-      </li>
-
+const NavAuth = ({ isLogin }) => {
+  if (isLogin) {
+    return (
       <li className="nav-item my-auto dropdown d-flex">
         <div className="vertical-line d-lg-block d-none"></div>
         <div>
@@ -38,30 +30,51 @@ const NavAuth = () => {
             aria-labelledby="dropdownMenuLink"
           >
             <li>
-              <a className="dropdown-item text-lg color-palette-2" href="/#">
-                My Profile
-              </a>
+              <Link href="/member">
+                <a className="dropdown-item text-lg color-palette-2">
+                  My Profile
+                </a>
+              </Link>
             </li>
             <li>
-              <a className="dropdown-item text-lg color-palette-2" href="/#">
-                Wallet
-              </a>
+              <Link href="/">
+                <a className="dropdown-item text-lg color-palette-2">Wallet</a>
+              </Link>
             </li>
             <li>
-              <a className="dropdown-item text-lg color-palette-2" href="/#">
-                Account Settings
-              </a>
+              <Link href="/member/edit-profile">
+                <a className="dropdown-item text-lg color-palette-2">
+                  Account Settings
+                </a>
+              </Link>
             </li>
             <li>
-              <a className="dropdown-item text-lg color-palette-2" href="/#">
-                Log Out
-              </a>
+              <Link href="/sign-in">
+                <a className="dropdown-item text-lg color-palette-2">Log Out</a>
+              </Link>
             </li>
           </ul>
         </div>
       </li>
-    </>
+    );
+  }
+
+  return (
+    <li className="nav-item my-auto">
+      <Link href="/sign-in">
+        <a
+          className="btn btn-sign-in d-flex justify-content-center ms-lg-2 rounded-pill"
+          role="button"
+        >
+          Sign In
+        </a>
+      </Link>
+    </li>
   );
+};
+
+NavAuth.propTypes = {
+  isLogin: PropTypes.bool,
 };
 
 export default NavAuth;

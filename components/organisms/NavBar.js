@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { NavMenu } from "../molecules";
+import { NavItem, NavAuth, NavToggle } from "../molecules";
 
 const NavBar = () => {
   return (
@@ -10,19 +10,19 @@ const NavBar = () => {
           <a className="navbar-brand" href="#">
             <Image src="/logo/logo.svg" width={60} height={60} />
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
 
-          <NavMenu />
+          <NavToggle />
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto text-lg gap-lg-0 gap-2">
+              <NavItem href="/" title="Home" active />
+              <NavItem href="/games" title="Games" />
+              <NavItem href="/rewards" title="Rewards" />
+              <NavItem href="/discover" title="Discover" />
+              <NavItem href="/global-rank" title="Global Rank" />
+              <NavAuth isLogin />
+            </ul>
+          </div>
         </div>
       </nav>
     </section>

@@ -1,4 +1,6 @@
-import NavMenu from "./NavMenu";
+import NavItem from "./NavItem";
+import NavToggle from "./NavToggle";
 import NavAuth from "./NavAuth";
+import HeaderImage from "./HeaderImage";
 
-export { NavMenu, NavAuth };
+export { NavItem, NavToggle, NavAuth, HeaderImage };
