@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const SignIn = () => {
@@ -87,13 +88,15 @@ const SignIn = () => {
                 >
                   Continue to Sign In
                 </a>
-                <a
-                  className="btn btn-sign-up fw-medium text-lg color-palette-1 rounded-pill"
-                  href="../src/sign-up.html"
-                  role="button"
-                >
-                  Sign Up
-                </a>
+                <Link href="/sign-up">
+                  <a
+                    className="btn btn-sign-up fw-medium text-lg color-palette-1 rounded-pill"
+                    // href="../src/sign-up.html"
+                    role="button"
+                  >
+                    Sign Up
+                  </a>
+                </Link>
               </div>
             </div>
           </form>
