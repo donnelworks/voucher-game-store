@@ -5,7 +5,7 @@ import HeaderImage from "./HeaderImage";
 import FeaturedStepItem from "./FeaturedStepItem";
 import FeaturedGameItem from "./FeaturedGameItem";
 import ReachedItem from "./ReachedItem";
-import FooterItem from "./FooterItem";
+import FooterLink from "./FooterLink";
 
 export {
   NavItem,
@@ -15,5 +15,5 @@ export {
   FeaturedStepItem,
   FeaturedGameItem,
   ReachedItem,
-  FooterItem,
+  FooterLink,
 };

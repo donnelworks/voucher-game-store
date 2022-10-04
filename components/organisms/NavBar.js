@@ -20,7 +20,7 @@ const NavBar = () => {
               <NavItem href="/rewards" title="Rewards" />
               <NavItem href="/discover" title="Discover" />
               <NavItem href="/global-rank" title="Global Rank" />
-              <NavAuth isLogin />
+              <NavAuth />
             </ul>
           </div>
         </div>

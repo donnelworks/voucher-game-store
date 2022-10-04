@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FooterItem } from "../molecules";
+import { FooterLink } from "../molecules";
 
 const Footer = () => {
   return (
@@ -23,78 +23,36 @@ const Footer = () => {
             <div className="col-lg-8 mt-lg-0 mt-20">
               <div className="row gap-sm-0">
                 <div className="col-md-4 col-6 mb-lg-0 mb-25">
-                  <FooterItem />
+                  <FooterLink
+                    title="Company"
+                    links={[
+                      { title: "About Us", href: "/" },
+                      { title: "Press Release", href: "/" },
+                      { title: "Terms of Use", href: "/" },
+                      { title: "Privacy & Policy", href: "/" },
+                    ]}
+                  />
                 </div>
                 <div className="col-md-4 col-6 mb-lg-0 mb-25">
-                  <p className="text-lg fw-semibold color-palette-1 mb-12">
-                    Support
-                  </p>
-                  <ul className="list-unstyled">
-                    <li className="mb-6">
-                      <a
-                        href=""
-                        className="text-lg color-palette-1 text-decoration-none"
-                      >
-                        Refund Policy
-                      </a>
-                    </li>
-                    <li className="mb-6">
-                      <a
-                        href=""
-                        className="text-lg color-palette-1 text-decoration-none"
-                      >
-                        Unlock Rewards
-                      </a>
-                    </li>
-                    <li className="mb-6">
-                      <a
-                        href=""
-                        className="text-lg color-palette-1 text-decoration-none"
-                      >
-                        Live Chatting
-                      </a>
-                    </li>
-                  </ul>
+                  <FooterLink
+                    title="Support"
+                    links={[
+                      { title: "Refund Policy", href: "/" },
+                      { title: "Unlock Rewards", href: "/" },
+                      { title: "Live Chatting", href: "/" },
+                    ]}
+                  />
                 </div>
                 <div className="col-md-4 col-12 mt-lg-0 mt-md-0 mt-25">
-                  <p className="text-lg fw-semibold color-palette-1 mb-12">
-                    Connect
-                  </p>
-                  <ul className="list-unstyled">
-                    <li className="mb-6">
-                      <a
-                        href="mailto: hi@store.gg"
-                        className="text-lg color-palette-1 text-decoration-none"
-                      >
-                        hi@store.gg
-                      </a>
-                    </li>
-                    <li className="mb-6">
-                      <a
-                        href="mailto: team@store.gg"
-                        className="text-lg color-palette-1 text-decoration-none"
-                      >
-                        team@store.gg
-                      </a>
-                    </li>
-                    <li className="mb-6">
-                      <a
-                        href="http://maps.google.com/?q=Pasific 12,
-                                        Jakarta Selatan"
-                        className="text-lg color-palette-1 text-decoration-none"
-                      >
-                        Pasific 12, Jakarta Selatan
-                      </a>
-                    </li>
-                    <li className="mb-6">
-                      <a
-                        href="tel: 02111229090"
-                        className="text-lg color-palette-1 text-decoration-none"
-                      >
-                        021 - 1122 - 9090
-                      </a>
-                    </li>
-                  </ul>
+                  <FooterLink
+                    title="Connect"
+                    links={[
+                      { title: "hi@store.gg", href: "/" },
+                      { title: "team@store.gg", href: "/" },
+                      { title: "Pasific 12, Jakarta Selatan", href: "/" },
+                      { title: "021 - 1122 - 9090", href: "/" },
+                    ]}
+                  />
                 </div>
               </div>
             </div>
