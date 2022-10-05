@@ -13,6 +13,9 @@ import CheckoutSubmit from "./CheckoutSubmit";
 import SignInForm from "./SignInForm";
 import SignUpForm from "./SignUpForm";
 import SignUpPhotoForm from "./SignUpPhotoForm";
+import Sidebar from "./Sidebar";
+import Overview from "./Overview";
+import EditProfileForm from "./EditProfileForm";
 
 export {
   NavBar,
@@ -30,4 +33,7 @@ export {
   SignInForm,
   SignUpForm,
   SignUpPhotoForm,
+  Sidebar,
+  Overview,
+  EditProfileForm,
 };
